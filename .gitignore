@@ -1,0 +1,8 @@
+__pycache__
+.idea
+.DS_Store
+*.lprof
+*.out
+*.bin
+tmp
+data
