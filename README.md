@@ -23,7 +23,7 @@ python setup.py build
 python setup.py install
 ```
 ### Docker
-We also provided a Dockerfile to help install the dependencies fast.
+We also provided a Dockerfile to help install the dependencies.
 
 ```bash
 docker build -t ncov .
@@ -41,12 +41,12 @@ Here are the data descriptions.
 
 - `data/data_x-xx-foreign.csv` epidemic data in other countries, Without this file, the experiments related to other countries can't be conducted.
 - `data/province_data_extra_x-xx.csv` epidemic data in China's mainland. Without this file, the experiments related to China's mainland can't be conducted.
-- `data/refine_transfer3.csv` population movement data in China's mainland. Without this file, the experiments related to China's mainland except for Hubei can't be conduct.
+- `data/refine_transfer3.csv` population movement data in China's mainland. Without this file, the experiments related to China's mainland except for Hubei can't be conducted.
 - `data/cur_confirmed-xxxx-xx-xx.json` cumulative confirmed cases in China's mainland on the date of xxxx-xx-xx. This file is only used in the results plot function, i.e., without this file, forecasting and training will not be influenced.
 
 The epidemic data table should contain the following columns.
 
-- `date` current date in format of `yyyy-mm-dd`.
+- `date` current date in the format of `yyyy-mm-dd`.
 - `adcode` address code of current region/province. Region mapping relationship is listed in the function of `it_code_dict` in `components/utils.py`.
 - `dead` newly mortalled cases.
 - `cum_dead` cumulative mortalled cases.
@@ -57,9 +57,9 @@ The epidemic data table should contain the following columns.
 
 The population movement data table should contain following columns.
 
-- `date` current date in format of `yyyy-mm-dd`.
-- `src_id` address code of source province.
-- `dst_id` address code of destination province.
+- `date` current date in the format of `yyyy-mm-dd`.
+- `src_id` address code of the source province.
+- `dst_id` address code of the destination province.
 - `travel_num` population of the movement from source to destination.
 
 
@@ -108,7 +108,7 @@ find ./trained_model/ -type f | xargs -I {} cp {} .
 python prepare_data_foreign.py --load_inter 1
 python paper_plot2_foreign.py
 ```
-If you want to change the forecasting configuration in these countries, refer to the function `run_simulation2` in `show_simulation_foreign.py` for more details. And you can forecast the result by the following commands.
+If you want to change the forecasting configuration in these countries, refer to the function `run_simulation2` in `show_simulation_foreign.py` for more details. And you can forecast the results by the following commands.
 
 ```bash
 python prepare_data_foreign.py 
@@ -121,7 +121,7 @@ python paper_plot2_foreign.py
 python prepare_data_china.py --load_inter 1
 python papar_plot2_china.py
 ```
-For lack of the population movement data, a different forecasting configuration can not be set.
+For lack of the population movement data, a new forecasting configuration can not be set.
 
 
 ### Comprasion with SEIR and LSTM methods
