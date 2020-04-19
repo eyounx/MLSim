@@ -35,7 +35,7 @@ cd ncov
 We released our core algorithm. However, because of the copyright reasons, we didn't release all data. Before using MLSim to train your own model, you should gather the corresponding data yourself.
 
 The Chinese epidemic data was gathered from [BlankerL/DXY-COVID-19-Data](https://github.com/BlankerL/DXY-COVID-19-Data).
-The epidemic data source is [CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19).
+The epidemic data source of other countries is [CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19).
 The population movement data in China’s mainland were sourced from [baiduqianxi](http://qianxi.baidu.com).
 Here are the data descriptions.
 
