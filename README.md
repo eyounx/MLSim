@@ -1,5 +1,5 @@
 # MLSim
-MLSim is a machine learning based fine-grained disease transmission simulator. The algorithm is based on the paper "Estimating COVID-19 Asymptomatic Infections by Machine Learning based Transmission Simulator". 
+MLSim is a machine learning based fine-grained disease transmission simulator. The algorithm is based on the paper "COVID-19 Asymptomatic Infection Estimation". 
 
 To forecast the epidemic progress, MLSim integrates multiple practical factors including disease progress in the incubation period, cross-region population movement, undetected asymptomatic patients, and prevention and containment strength. The interactions among these factors are modeled by virtual transmission dynamics with several undetermined parameters, which are determined from epidemic data by machine learning techniques. 
 
